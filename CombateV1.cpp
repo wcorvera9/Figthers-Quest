@@ -13,6 +13,16 @@ bool estavivo(personajes equipo[], int tam){
     }
     
 }
+// poder cambiar de personaje durante la partida
 int cambiarpersonaje(personajes equipo[], int tam, int usando, int jugador){
+    cout << "jugador" << jugador << " elige otro personaje: " << endl;
+    for (int i=0; i < tam; i++)
+    {
+        if (equipo[i].estavivo() && i !=usando){
+            cout << i << "/" << equipo[i].nombre << endl;
+            cout << "Hp: " << equipo[i].hp << endl;
+        }
+    }
     
+
 }
