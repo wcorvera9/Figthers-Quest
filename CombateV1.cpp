@@ -23,7 +23,3 @@ void elegirEquipo(Personaje equipo[]) {
     }
 return false;
 }
-void combate() {
-    Personaje equipo[3];
-    Personaje jefe("JEFE", 300, 30, 0);
-    int activo = 0;
