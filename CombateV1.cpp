@@ -43,4 +43,13 @@ void combate() {
             continue;
         }
     }
+        cout << "TURNO" << endl;
+        equipo[activo].mostrarestado();
+        jefe.mostrarestado();
 
+        cout << "1) Ataque normal";
+        cout << "2) Ataque especial";
+        int opcion;
+        cin >> opcion;
+
+       
