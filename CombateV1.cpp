@@ -16,3 +16,14 @@ void elegirEquipo(Personaje equipo[]) {
         equipo[i] = listaPersonajes[op];
     }
 }
+ bool equipoVivo(Personaje equipo[]) {
+    for (int i = 0; i < 3; i++) {
+    if (equipo[i].estaVivo())
+    return true;
+    }
+return false;
+}
+void combate() {
+    Personaje equipo[3];
+    Personaje jefe("JEFE", 300, 30, 0);
+    int activo = 0;
