@@ -52,4 +52,14 @@ void combate() {
         int opcion;
         cin >> opcion;
 
-       
+    
+        if (opcion == 2)
+    jefe.recibirdano(equipo[activo].danoespecial);
+        else
+    jefe.recibirdano(equipo[activo].danoataque);
+
+        if (jefe.estaVivo()) {
+    cout << "El jefe ataca!"; 
+    equipo[activo].recibirdano(jefe.danoataque);}
+    }
+    
