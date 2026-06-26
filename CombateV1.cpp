@@ -65,7 +65,7 @@ void combate() {
     
 
     if (jefe.estaVivo())
-        cout << "PERDIST";
+        cout << "PERDISTE";
     else
         cout << "GANASTE";
 }
