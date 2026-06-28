@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "PersonajesV2.cpp"
+
 
 using namespace std;
 void guardarPartida(Personaje equipo[], Personaje jefe, int activo) {

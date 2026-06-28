@@ -7,12 +7,12 @@ using namespace std;
 void elegirEquipo(Personaje equipo[]) {
     cout << "Elige 3 personajes:\n";
 
-    // Mostrar personajes disponibles
+    
     for (int i = 0; i < TOTAL_PERSONAJES; i++) {
         cout << i << ") " << listaPersonajes[i].nombre << endl;
     }
 
-    // Elegir 3
+    
     for (int i = 0; i < 3; i++) {
         int op;
         cout << "Personaje " << i + 1 << ": ";
@@ -43,7 +43,7 @@ void combate() {
             activo++;
             continue;
         }
-    }
+    
         cout << "TURNO" << endl;
         equipo[activo].mostrarestado();
         jefe.mostrarestado();
@@ -56,7 +56,7 @@ void combate() {
         if (opcion == 3){
 guardarPartida(equipo, jefe, activo);
 return; 
-}
+        }
 
     
         if (opcion == 2){
@@ -74,4 +74,5 @@ return;
         cout << "PERDISTE";
     else
         cout << "GANASTE";
+}
 }
