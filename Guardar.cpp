@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include "CombateV1.cpp"
 
 
 using namespace std;

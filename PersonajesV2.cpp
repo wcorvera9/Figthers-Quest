@@ -33,8 +33,8 @@ danoespecial = especial;
     cout << nombre << " | Vida: " << puntosvida << endl;
     }
 };
-const int TOTAL_PERSONAJES = 10;
-Personaje listaPersonajes[TOTAL_PERSONAJES];
+const int maxdepersonajes = 10;
+Personaje listaPersonajes[maxdepersonajes];
 
 void inicializarPersonajes() {
 listaPersonajes[0] = Personaje("Kratos", 230, 25, 35);

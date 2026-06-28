@@ -1,18 +1,17 @@
 #include <iostream>
 #include "PersonajesV2.cpp"
-#include "Guardar.cpp"
 
 using namespace std;
 
 void elegirEquipo(Personaje equipo[]) {
     cout << "Elige 3 personajes:\n";
 
-    
-    for (int i = 0; i < TOTAL_PERSONAJES; i++) {
+    // Mostrar personajes disponibles
+    for (int i = 0; i < maxdepersonajes; i++) {
         cout << i << ") " << listaPersonajes[i].nombre << endl;
     }
 
-    
+    // Elegir 3
     for (int i = 0; i < 3; i++) {
         int op;
         cout << "Personaje " << i + 1 << ": ";
@@ -43,20 +42,15 @@ void combate() {
             activo++;
             continue;
         }
-    
+    }
         cout << "TURNO" << endl;
         equipo[activo].mostrarestado();
         jefe.mostrarestado();
 
-        cout << "1) Ataque normal" << endl;
-        cout << "2) Ataque especial" << endl;
-        cout << "3) Guardar partida" << endl;
+        cout << "1) Ataque normal";
+        cout << "2) Ataque especial";
         int opcion;
         cin >> opcion;
-        if (opcion == 3){
-guardarPartida(equipo, jefe, activo);
-return; 
-        }
 
     
         if (opcion == 2){
@@ -71,8 +65,7 @@ return;
     
 
     if (jefe.estaVivo())
-        cout << "PERDISTE";
+        cout << "PERDIST";
     else
         cout << "GANASTE";
-}
 }
