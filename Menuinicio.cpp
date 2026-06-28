@@ -22,4 +22,21 @@ void guardarPartida(Personaje equipo[], Personaje jefe, int activo) {
 }
 bool ContinuarPartida(Personaje equipo[], Personaje & jefe, int &activo){
     ifstream archivo("guardado.txt");
+    if (!archivo)
+    {
+        return false;
+    }
+    
+
+archivo >> activo;
+archivo >>jefe.puntosvida;
+for (int i = 0; i < 3; i++)
+{
+    archivo >> equipo[i].puntosvida;
 }
+ archivo.close();
+ return true;
+}
+
+
+
