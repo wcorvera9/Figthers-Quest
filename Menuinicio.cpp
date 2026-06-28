@@ -20,5 +20,6 @@ void guardarPartida(Personaje equipo[], Personaje jefe, int activo) {
     archivo.close();
     cout << "guardado" << endl;
 }
-
-
+bool ContinuarPartida(Personaje equipo[], Personaje & jefe, int &activo){
+    ifstream archivo("guardado.txt");
+}
