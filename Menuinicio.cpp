@@ -12,5 +12,13 @@ void guardarPartida(Personaje equipo[], Personaje jefe, int activo) {
     }
     archivo << activo << endl;
     archivo << jefe.puntosvida << endl;
-
     
+    for(int i=0; i < 3; i++){
+        archivo << equipo[i].puntosvida << endl;
+    }
+
+    archivo.close();
+    cout << "guardado" << endl;
+}
+
+
