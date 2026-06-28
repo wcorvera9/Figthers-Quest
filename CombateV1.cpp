@@ -48,10 +48,15 @@ void combate() {
         equipo[activo].mostrarestado();
         jefe.mostrarestado();
 
-        cout << "1) Ataque normal";
-        cout << "2) Ataque especial";
+        cout << "1) Ataque normal" << endl;
+        cout << "2) Ataque especial" << endl;
+        cout << "3) Guardar partida" << endl;
         int opcion;
         cin >> opcion;
+        if (opcion == 3){
+guardarPartida(equipo, jefe, activo);
+return; 
+}
 
     
         if (opcion == 2){
