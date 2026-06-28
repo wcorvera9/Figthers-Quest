@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PersonajesV2.cpp"
+#include "guardado.cpp"
 
 using namespace std;
 
