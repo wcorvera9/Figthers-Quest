@@ -31,15 +31,6 @@ bool equipoVivo(Personaje equipo[])
     }
     return false;
 }
-void combate()
-{
-    Personaje equipo[3];
-    Personaje jefe("JEFE", 300, 30, 0);
-    int activo = 0;
-
-    elegirEquipo(equipo);
-    combate(equipo, jefe, activo);
-}
 void combate(Personaje equipo[], Personaje jefe, int activo)
 {
     while (equipoVivo(equipo) && jefe.estaVivo())
@@ -84,4 +75,13 @@ void combate(Personaje equipo[], Personaje jefe, int activo)
         cout << "PERDISTE" << endl;
     else
         cout << "GANASTE" << endl;
+}
+void combate()
+{
+    Personaje equipo[3];
+    Personaje jefe("JEFE", 300, 30, 0);
+    int activo = 0;
+
+    elegirEquipo(equipo);
+    combate(equipo, jefe, activo);
 }
