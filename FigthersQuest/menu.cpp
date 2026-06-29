@@ -26,7 +26,7 @@ void menu() {
             int activo = 0;
             if (ContinuarPartida(equipo, jefe, activo))
             {
-                combate();  
+                combate(equipo, jefe, activo);  
             }
             else
             {

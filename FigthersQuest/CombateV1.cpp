@@ -31,7 +31,6 @@ bool equipoVivo(Personaje equipo[])
     }
     return false;
 }
-
 void combate()
 {
     Personaje equipo[3];
@@ -39,17 +38,19 @@ void combate()
     int activo = 0;
 
     elegirEquipo(equipo);
-
+    combate(equipo, jefe, activo);
+}
+void combate(Personaje equipo[], Personaje jefe, int activo)
+{
     while (equipoVivo(equipo) && jefe.estaVivo())
     {
-
         if (!equipo[activo].estaVivo())
         {
             activo = (activo + 1) % 3;
             continue;
         }
 
-        cout << "TURNO";
+        cout << "TURNO" << endl;
         equipo[activo].mostrarestado();
         jefe.mostrarestado();
         int opcion;
@@ -61,7 +62,7 @@ void combate()
         if (opcion == 3)
         {
             guardarPartida(equipo, jefe, activo);
-            cout << "Partida guardada";
+            cout << "Partida guardada" << endl;
             return;
         }
 
@@ -80,7 +81,7 @@ void combate()
     }
 
     if (jefe.estaVivo())
-        cout << "PERDISTE";
+        cout << "PERDISTE" << endl;
     else
-        cout << "GANASTE";
+        cout << "GANASTE" << endl;
 }
