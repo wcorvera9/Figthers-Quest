@@ -16,7 +16,6 @@ void guardarPartida(Personaje equipo[], Personaje jefe, int activo)
 
     for (int i = 0; i < 3; i++)
     {
-        archivo << equipo[i].nombre << endl;
         archivo << equipo[i].puntosvida << endl;
         archivo << equipo[i].danoataque << endl;
         archivo << equipo[i].danoespecial << endl;
@@ -37,7 +36,6 @@ bool ContinuarPartida(Personaje equipo[], Personaje &jefe, int &activo)
 
     for (int i = 0; i < 3; i++)
     {
-        archivo >> equipo[i].nombre;
         archivo >> equipo[i].puntosvida;
         archivo >> equipo[i].danoataque;
         archivo >> equipo[i].danoespecial;
