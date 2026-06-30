@@ -48,6 +48,7 @@ void combate(Personaje equipo[], Personaje jefe, int activo)
         cout << "1) Ataque normal" << endl;
         cout << "2) Ataque especial" << endl;
         cout << "3) Guardar partida" << endl;
+        cout << "4) Cambiar personaje" << endl;
         cin >> opcion;
 
         if (opcion == 3)
@@ -67,14 +68,41 @@ void combate(Personaje equipo[], Personaje jefe, int activo)
             cout << "El jefe ataca!" << endl;
             equipo[activo].recibirdano(jefe.danoataque);
         }
-
-        activo = (activo + 1) % 3;
+      else if (opcion == 4)
+        {
+            cout << "Elige personaje:" << endl;
+            for (int i = 0; i < 3; i++)
+            {
+                if (equipo[i].estaVivo())
+                    cout << i + 1 << ") " << equipo[i].nombre << " | Vida: " << equipo[i].puntosvida << endl;
+                else
+                    cout << i + 1 << ") " << equipo[i].nombre << " (muerto)" << endl;
+            }
+            int nuevo;
+            cin >> nuevo;
+            nuevo = nuevo - 1;
+            if (nuevo >= 0 && nuevo < 3 && equipo[nuevo].estaVivo())
+                activo = nuevo;
+            else
+                cout << "Opcion invalida o personaje muerto" << endl;
+            continue; 
+        }
+        else
+        {
+            cout << "Opcion invalida, intenta de nuevo" << endl;
+            continue;
+        }
+            
+        
+    
     }
+    activo = (activo + 1) % 3;
 
-    if (jefe.estaVivo())
-        cout << "PERDISTE" << endl;
-    else
-        cout << "GANASTE" << endl;
+
+if (jefe.estaVivo())
+    cout << "PERDISTE" << endl;
+else
+    cout << "GANASTE" << endl;
 }
 void combate()
 {
