@@ -39,7 +39,7 @@ struct Personaje
         cout << nombre << " | Vida: " << puntosvida << endl;
     }
 };
-const int maxdepersonajes = 21;
+const int maxdepersonajes = 20;
 Personaje listaPersonajes[maxdepersonajes];
 
 void inicializarPersonajes()

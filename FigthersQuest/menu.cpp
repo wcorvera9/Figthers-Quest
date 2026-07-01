@@ -5,9 +5,9 @@ using namespace std;
 void menu() {
     int opcion;
     do {
-        cout << "#######################################" << endl;
-        cout << "               MENU                    " << endl;
-        cout << "#######################################" << endl;
+        cout << " ####################################### " << endl;
+        cout << "               MENU                      " << endl;
+        cout << " ####################################### " << endl;
         cout << "1) Nueva partida "<< endl;
         cout << "2) Continuar partida "<< endl;
         cout << "3) Salir" << endl;
