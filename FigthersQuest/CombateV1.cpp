@@ -36,6 +36,7 @@ void combate(Personaje equipo[], Personaje jefe, int activo)
 {
     while (equipoVivo(equipo) && jefe.estaVivo())
     {
+        // [IA] Esta lógica fue apoyada con IA para evitar errores de turno permite cambiar automáticamente al siguiente personaje si el activo muere.
         if (!equipo[activo].estaVivo())
         {
             activo = (activo + 1) % 3;

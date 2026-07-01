@@ -17,6 +17,7 @@ void menu() {
         {
             inicializarPersonajes();
             combate(); 
+            // [IA] Se utilizó IA para organizar el flujo del menú principal, diferenciando correctamente entre nueva partida y partida guardada. 
         }         
         else if (opcion == 2) 
         {   
