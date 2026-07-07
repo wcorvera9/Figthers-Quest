@@ -39,20 +39,20 @@ void combate(Personaje equipo[], Personaje jefe, int activo)
         // [IA] Esta lógica fue apoyada con IA para evitar errores de turno permite cambiar automáticamente al siguiente personaje si el activo muere.
         if (!equipo[activo].estaVivo())
         {
-            activo = (activo + 1) % 3;
+            activo = (activo + 1) % 3; 
             continue;
         }
-
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         cout << "TURNO" << endl;
         equipo[activo].mostrarestado();
         jefe.mostrarestado();
 
-        int opcion;
-        cout << "1) Ataque normal" << endl;
-        cout << "2) Ataque especial" << endl;
-        cout << "3) Guardar partida" << endl;
-        cout << "4) Cambiar personaje" << endl;
-        cin >> opcion;
+int opcion;
+cout << "--------------------------------------------------------------------------" << endl;
+cout << "| [1] Ataque normal | [2] Ataque especial | [3] Guardar | [4] Cambiar |" << endl;
+cout << "--------------------------------------------------------------------------" << endl;
+cout << "Opcion: ";
+cin >> opcion;
 
         if (opcion == 1)
         {

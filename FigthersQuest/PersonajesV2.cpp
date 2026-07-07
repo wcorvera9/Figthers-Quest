@@ -65,3 +65,4 @@ void inicializarPersonajes()
     listaPersonajes[18] = Personaje("Kirby", 150, 19, 42);
     listaPersonajes[19] = Personaje("William", 185, 26, 39);
 }
+

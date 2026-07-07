@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
 
-
 using namespace std;
-// [IA] Se uso fstream para escribir y leer archivos de texto, y getline para leer nombres con espacios como "Rock Lee"
+
+    // [IA] Se uso fstream para escribir y leer archivos de texto, y getline para leer nombres con espacios como "Rock Lee"
 void guardarPartida(Personaje equipo[], Personaje jefe, int activo)
 {
     ofstream archivo("guardado.txt");
@@ -12,9 +12,11 @@ void guardarPartida(Personaje equipo[], Personaje jefe, int activo)
         cout << "Error";
         return;
     }
-     // [IA] Se define el orden exacto de guardado para poder restaurar la partida correctamente
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // [IA] Se define el orden exacto de guardado para poder restaurar la partida correctamente
     archivo << activo << endl;
     archivo << jefe.puntosvida << endl;
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     for (int i = 0; i < 3; i++)
     {
@@ -37,7 +39,7 @@ bool ContinuarPartida(Personaje equipo[], Personaje &jefe, int &activo)
     archivo >> activo;
     archivo >> jefe.puntosvida;
     archivo.ignore();
-
+   
     for (int i = 0; i < 3; i++)
     {
         getline(archivo, equipo[i].nombre);
@@ -46,7 +48,7 @@ bool ContinuarPartida(Personaje equipo[], Personaje &jefe, int &activo)
         archivo >> equipo[i].danoespecial;
         archivo.ignore();
     }
-
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     archivo.close();
     return true;
 }
