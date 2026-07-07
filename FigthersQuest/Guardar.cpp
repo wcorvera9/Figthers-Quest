@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 
+
 using namespace std;
 // [IA] Se uso fstream para escribir y leer archivos de texto, y getline para leer nombres con espacios como "Rock Lee"
 void guardarPartida(Personaje equipo[], Personaje jefe, int activo)
