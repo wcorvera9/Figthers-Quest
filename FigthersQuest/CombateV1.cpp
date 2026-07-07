@@ -6,7 +6,10 @@ using namespace std;
 
 void elegirEquipo(Personaje equipo[])
 {
-    cout << "Elige 3 personajes:" << endl;
+        
+    cout << "===================================" << endl; 
+    cout << "Elige 3 personajes para tu batalla:" << endl;
+    cout << "===================================" << endl; 
 
     for (int i = 0; i < maxdepersonajes; i++)
     {
@@ -16,12 +19,29 @@ void elegirEquipo(Personaje equipo[])
     for (int i = 0; i < 3; i++)
     {
         int opcion;
-        cout << "Personaje " << i + 1 << ": ";
-        cin >> opcion;
+        bool valido = false;
+
+        // [IA] este do-while se queda pidiendo el numero hasta que este dentro del rango, sino explota el indice del array
+        do
+        {
+            cout << "Personaje " << i + 1 << ": ";
+            cin >> opcion;
+
+            if (opcion < 0 || opcion >= maxdepersonajes)
+            {
+                cout << "Opcion invalida, intenta de nuevo" << endl;
+            }
+            else
+            {
+                valido = true;
+            }
+
+        } while (!valido);
+
         equipo[i] = listaPersonajes[opcion];
     }
 }
-
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool equipoVivo(Personaje equipo[])
 {
     for (int i = 0; i < 3; i++)
@@ -39,7 +59,7 @@ void combate(Personaje equipo[], Personaje jefe, int activo)
         // [IA] Esta lógica fue apoyada con IA para evitar errores de turno permite cambiar automáticamente al siguiente personaje si el activo muere.
         if (!equipo[activo].estaVivo())
         {
-            activo = (activo + 1) % 3; 
+            activo = (activo + 1) % 3;
             continue;
         }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

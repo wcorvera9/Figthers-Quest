@@ -1,14 +1,14 @@
 1
-500
-Rock Lee
+197
+William
+0
+26
+39
+Precalculo
 150
-25
-35
-Gengar
-150
-20
-40
-Hornet
-150
-30
-30
+28
+42
+Pedro
+175
+23
+38
